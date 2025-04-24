@@ -8,6 +8,7 @@ on:
 jobs:
   git-town:
     name: Display the branch stack
+    if: ${{ github.event.pull_request.user.login != 'pr-stacker[bot]' }}
     runs-on: ubuntu-latest
 
     permissions:
